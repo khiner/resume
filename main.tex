@@ -1,0 +1,299 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}
+\input{glyphtounicode}
+
+\definecolor{linkcolor}{RGB}{0, 114, 178}
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = linkcolor
+}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small#2 \\
+      \small #3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeEducationHeading}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
+      \small#3 & \small #4 \\
+      \small#5 & \small #6 \\
+    \end{tabular*}\vspace{-1.75em}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{3pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-9pt}
+}
+\newcommand{\resumeOrganizationHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small#3}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\resumeSectionBody}[1]{
+  \vspace{0.7em}
+  \small #1
+  \vspace{-5pt}
+}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%---------- HEADING ----------
+
+\begin{center}
+    \textbf{\Huge \scshape Karl Hiner} \\ \vspace{3pt}
+    \small
+    \faMobile \hspace{.5pt} \href{tel:6127479175}{612-747-9175}
+    $|$
+    \faAt \hspace{.5pt} \href{mailto:karl.hiner@gmail.com}{karl.hiner@gmail.com}
+    $|$
+    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/karl-hiner-9534b333}{LinkedIn}
+    $|$
+    \faGithub \hspace{.5pt} \href{https://github.com/khiner}{GitHub}
+    $|$
+    \faGlobe \hspace{.5pt} \href{https://karlhiner.com}{Portfolio}
+\end{center}
+
+
+\section{Education}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    \resumeEducationHeading
+      {Portland State University}{Portland, Oregon}
+      {Bachelors of Science, Computer Science $|$ \footnotesize{GPA: 3.82}}{2010 \textbf{--} 2013}{}{}
+    \resumeEducationHeading
+      {Georgia Institute of Technology}{Atlanta, Georgia}
+      {Master's, Computational Sciences and Engineering $|$ \footnotesize{GPA: 3.9}}{Sep. 2022 \textbf{--} graduating Apr. 2024}{}{}
+  \resumeSubHeadingListEnd
+
+\section{Skills}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{Languages:}{ C++, Python, TypeScript/JavaScript, Java, Ruby, Julia, SQL} \\ \vspace{3pt}
+        \textbf{Technologies:}{ Git, ImGui, React, Postgres, Docker, JAX, PyTorch, Node} \\ \vspace{3pt}
+        \textbf{Expertise:}{ Full-stack development, technical leadership, physical modeling and simulation, applied machine learning} \\ \vspace{3pt}
+    }}
+  \resumeSubHeadingListEnd
+
+\section{Experience}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Axiom Data Science}{Portland, Oregon}
+      {Lead Software Engineer}{Feb 2020 \textbf{--} Jul 2022, Full-time}
+
+      \resumeSectionBody{
+        Lead developer on the next generation of the Research Workspace, a web application for collaboratively managing data for science projects.
+        Designed and implemented the following major projects:
+      }
+      \resumeItemListStart
+        \resumeItem{An extensive admin application supporting many internal Research Workspace use-cases.}
+        \resumeItem{A user authentication and authorization service backend and UI library, used across multiple Axiom services.}
+        \resumeItem{An internal set of packages to improve and modularize UI components.}
+        \resumeItem{A remote browser service acting as an internal QA tool to help quickly discover regressions across our many portals and pages, as well as a remote browser screenshot service for generating animations for portal maps.}
+        \resumeItem{Major features and improvements for Axiom’s data portals, including a cross-portal feature called \textit{Map Views} enabling users to create, edit, share and publish multiple portal map instances.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Cozy}{Portland, Oregon}
+      {Senior Software Engineer}{Oct 2018 \textbf{--} Jan 2020, Full-time}
+        \resumeItemListStart
+            \resumeItem{Led development of major components of Cozy's web app and payments system.}
+            \resumeItem{Transitioned components and services to be presented and consumed by Apartments.com after Cozy's acquisition by CoStar Group.}
+            \resumeItem{Mentored junior engineers. Led product development efforts on large projects, including project and sprint planning and organizing team efforts.}
+        \resumeItemListEnd
+    \resumeSubheading
+      {Self}{Portland, Oregon}
+      {Independent Study}{Dec 2017 \textbf{--} Oct 2018, Full-time}
+
+      \resumeSectionBody{
+        I took an unpaid sabbatical to focus on learning about fields I am passionate about.
+        After returning to professional life, I continued to learn and read papers in my free time, and finally decided to pursue a Master's degree, aiming to transition into software domains that deeply interest and inspire me.
+      }
+      \resumeItemListStart
+        \resumeItem{Released an \href{https://karlhiner.com/beatbot}{Android app} for sample-based music production.}
+        \resumeItem{Studied digital audio signal processing, machine learning, C++, and Python, and produced in-depth Jupyter notebooks for each chapter of eight technical books on these topics.}
+        \resumeItem{Completed online courses in deep learning and statistics.}
+        \resumeItem{Developed digital audio workstation software.}
+        \resumeItem{Implemented a declarative static site generator in React, and used it to build my portfolio/blog website.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {New Relic - Applied Intelligence Services Team}{Portland, Oregon}
+      {Senior Software Engineer}{Oct 2016 \textbf{--} Dec 2017, Full-time}
+        \resumeItemListStart
+          \resumeItem{Researched and developed products for the Applied Intelligence team, including dynamic baselines, error profiles and host outlier detection.}
+          \resumeItem{Leveraged machine learning and statistical techniques on data from many monitoring sources to provide customers with actionable information and context to find, understand and fix software problems quickly. Architected, built, shipped and maintained frontend components, backend services and APIs.}
+          \resumeItem{Architected, built, shipped and maintained frontend components, backend services and APIs.}
+        \resumeItemListEnd
+    \resumeSubheading
+      {New Relic - Mobile Product Team}{Portland, Oregon}
+      {Software Engineer / Senior Software Engineer}{Apr 2014 \textbf{--} Oct 2016, Full-time}
+        \resumeItemListStart
+          \resumeItem{Designed, built and maintained several APIs, UI features and high-throughput services, mostly using Java, Ruby and React.}
+          \resumeItem{Acted as the technical lead on significant features including activity tracing, version trends, as well as features for crash reporting, network reporting, and real user monitoring.}
+        \resumeItemListEnd
+    \resumeSubheading
+      {New Relic - Mobile Team}{Portland, Oregon}
+      {Junior Software Engineer}{May 2013 \textbf{--} Apr 2014, Full-time}
+        \resumeItemListStart
+          \resumeItem{Co-produced the front-end for the Mobile product Rails application.}
+          \resumeItem{Developed data collection and aggregation service features.}
+          \resumeItem{Implemented components of the Android agent responsible for sourcing and reporting data from Android applications.}
+        \resumeItemListEnd
+    \resumeSubheading
+      {Thetus Corporation}{Portland, Oregon}
+      {DevOps Intern}{Jan 2013 \textbf{--} May 2013, Half-time}
+        \resumeItemListStart
+          \resumeItem{Automated host environment setup and web-app deployment.}
+        \resumeItemListEnd 
+    \resumeSubheading
+      {Jive Software}{Portland, Oregon}
+      {Software Engineering / Quality Engineering Intern}{Jan 2012 \textbf{--} Dec 2012, Half-time}
+        \resumeItemListStart
+          \resumeItem{Developed features and fixed bugs for the Jive platform.}
+          \resumeItem{Designed and implemented an automated test framework for Jive’s web application on a small team.}
+          \resumeItem{Co-implemented a modular and extensible testing framework, and wrote many functional tests using this framework.}
+          \resumeItem{Worked with teams to generate test plans.}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{MeshEditor} $|$ C++/Vulkan/ImGui $|$ \href{https://github.com/khiner/MeshEditor}{GitHub}}{}
+
+      \resumeSectionBody{
+        Real-time mesh viewer and editor with rigid body audio modeling, and interactive \href{https://samuelpclarke.com/realimpact/}{RealImpact} dataset explorer supporting comparison of audio models with real-world impact recordings.
+      }
+    \resumeProjectHeading
+      {\textbf{mesh2audio} $|$ C++/OpenGL/ImGui $|$ \href{https://github.com/khiner/mesh2audio}{GitHub}}{}
+
+      \resumeSectionBody{
+        Real-time modal audio synthesis from 3D meshes, with interactive vertex excitation.
+      }
+    \resumeProjectHeading
+      {\textbf{Jupyter notebooks} $|$ Python $|$ \href{https://github.com/khiner/notebooks}{GitHub}}{}
+
+      \resumeSectionBody{
+        Python Jupyter notebooks covering each chapter of several books, including:
+      }
+      \resumeItemListStart
+        \resumeItem{Gareth Loy’s Musimathics \emph{\href{https://karlhiner.com/jupyter_notebooks/musimathics_volume_1}{Vol 1.}} \emph{\href{https://karlhiner.com/jupyter_notebooks/musimathics_volume_2}{Vol 2.}}}
+        \resumeItem{Julius O. Smith’s \emph{\href{https://karlhiner.com/jupyter_notebooks/mathematics_of_the_dft}{Mathematics of the DFT}}, \emph{\href{https://karlhiner.com/jupyter_notebooks/intro_to_digital_filters}{Intro to Digital Filters}}, and \emph{\href{https://karlhiner.com/jupyter_notebooks/physical_audio_signal_processing}{Physical Audio Signal Processing}}}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Generating Music with WaveNet and SampleRNN} $|$ Python $|$ \href{https://karlhiner.com/music_generation/wavenet_and_samplernn}{GitHub}}{}
+
+      \resumeSectionBody{
+        Exploring musical raw audio generation using these popular models.
+      }
+    \resumeProjectHeading
+      {\textbf{JAXdsp} $|$ Python/JAX/TypeScript/React $|$ \href{https://github.com/khiner/jaxdsp}{GitHub}}{}
+
+      \resumeSectionBody{
+        Parameterize audio graphs in real-time to model an incoming/outgoing audio stream pair with differentiable DSP components, with data and audio over WebRTC.
+      }
+    \resumeProjectHeading
+      {\textbf{FlowGrid} $|$ C++/ImGui $|$\href{https://github.com/khiner/flowgrid}{GitHub}}{}
+
+      \resumeSectionBody{
+        Immediate-mode interface for the Faust functional audio language, backed by a persistent store supporting navigation to any point in the project history in constant time.
+      }
+    \resumeProjectHeading
+      {\textbf{BeatBot} $|$ Java/C/OpenGL $|$  \href{https://github.com/khiner/beatbot}{GitHub}}{}
+
+      \resumeSectionBody{
+        A sample-based music production app for Android, with an OpenSL audio/effects backend implemented in C, and a custom OpenGL-based 2D UI designed to minimize draw call submissions for optimal performance on low-end devices.
+      }
+    \resumeProjectHeading
+      {\textbf{Auto-Sampler} $|$ MaxMSP/Ruby/Javascript/C $|$ \href{https://karlhiner.com/music_generation/auto_sampler}{GitHub}}{}
+
+      \resumeSectionBody{
+        A Max4Live instrument that streams looping audio segments matching the pitch of incoming MIDI notes in real-time.
+      }
+    \resumeSubHeadingListEnd
+
+% \section{Relevant Coursework}
+  % \vspace{2pt}
+  % \resumeSubHeadingListStart
+    % \small{\item{
+        % \textbf{Major coursework:}{ Materials Science, Electrical Circuits I-II, Digital System Design, Numerical Methods, Probability Theory, Electronics I-II, Signals and Systems, Electromagnetic Field Theory, Energy Conversion, System Dynamics and Control, Communication Engineering, Pattern Recognition, Introduction to Digital Signal Processing, Introduction to Digital Communications, Introduction to Database Systems, Introduction to Image Processing, Machine Vision} \\ \vspace{3pt}
+        
+        % \textbf{Minor coursework:}{ Discrete Computational Structures, Introduction to Object-Oriented Programming, Data Structures and Algorithms, Computer Organization, Fundamentals of Software Engineering}
+    % }}
+  % \resumeSubHeadingListEnd
+
+
+% \section{Hobbies}
+  % \resumeSubHeadingListStart
+    % \small{\item{Basketball, Swimming, Fitness, Eight-ball, Horology}}
+  % \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
