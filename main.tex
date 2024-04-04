@@ -11,7 +11,6 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{hyphenat}
 \usepackage{fontawesome}
 \usepackage{changepage}
 
@@ -58,9 +57,9 @@
 \newcommand{\resumeSubheading}[4]{
   \item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \small#2 \\
+      \normalsize \textbf{#1} & \small#2 \\
       \small #3 & \small #4 \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-5pt}
 }
 \newcommand{\resumeEducationHeading}[6]{
   \vspace{-2pt}\item
@@ -120,7 +119,7 @@
   \resumeSubHeadingListStart
     \resumeEducationHeading
       {Portland State University}{Portland, Oregon}
-      {Bachelors of Science, Computer Science $|$ \footnotesize{GPA: 3.82}}{2010 \textbf{--} 2013}{}{}
+      {Bachelor of Science, Computer Science $|$ \footnotesize{GPA: 3.82}}{2010 \textbf{--} 2013}{}{}
     \resumeEducationHeading
       {Georgia Institute of Technology}{Atlanta, Georgia}
       {Master's, Computational Sciences and Engineering $|$ \footnotesize{Expected GPA: 3.9}}{Sep. 2022 \textbf{--} graduating Apr. 2024}{}{}
@@ -128,36 +127,38 @@
 
 \section{Relevant Coursework}
   \resumeSubHeadingListStart
-    \resumeItem{Modeling and Simulation, Computational Physics, Computational Data Analysis, Computer Graphics, Computer Animation, Numerical Linear Algebra, High Performance Computing, Machine Learning with Graphs}
+    \resumeItem{
+      \textbf{GA Tech:}{ Modeling and Simulation, Computational Physics, Computational Data Analysis, Computer Graphics, Computer Animation, Numerical Linear Algebra, High Performance Computing, Machine Learning with Graphs} \\ \vspace{3pt}
+      \textbf{PSU:}{ Machine Learning, AI and Game Design, Parallel Programming} \\ \vspace{3pt}
+      \textbf{Coursera:}{ Machine Learning, Deep Learning, Probabilistic Graphical Models, Audio Signal Processing} \\ \vspace{3pt}
+    }
     \resumeSubHeadingListEnd
-    \vspace{-15pt}
 
 \section{Skills}
   \resumeSubHeadingListStart
     \resumeItem{
         \textbf{Languages:}{ C++, Python, TypeScript/JavaScript, Java, Ruby, Julia, SQL} \\ \vspace{3pt}
-        \textbf{Technologies:}{ Git, ImGui, React, Postgres, Docker, JAX, PyTorch, Node} \\ \vspace{3pt}
+        \textbf{Technologies:}{ Git, React, ImGui, Linux, Postgres, JAX, PyTorch, Node, Docker} \\ \vspace{3pt}
         \textbf{Expertise:}{ Full-stack development, technical leadership, physical modeling and simulation, applied machine learning} \\ \vspace{3pt}
     }
   \resumeSubHeadingListEnd
 
 \section{Experience}
-  \vspace{3pt}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Axiom Data Science}{Portland, Oregon}
       {Lead Software Engineer}{Feb 2020 \textbf{--} Jul 2022, Full-time}
 
       \resumeSectionBody{
-        Lead developer on the next generation of the Research Workspace, a web application for collaboratively managing data for science projects.
+        Lead developer on the next generation of the Research Workspace, a web application for collaboratively managing data for scientific projects.
         Designed and implemented the following major projects:
       }
       \resumeItemListStart
         \resumeItem{An extensive admin application supporting many internal Research Workspace use-cases.}
         \resumeItem{A user authentication and authorization service backend and UI library, used across multiple Axiom services.}
-        \resumeItem{An internal set of packages to improve and modularize UI components.}
-        \resumeItem{A remote browser service acting as an internal QA tool to help quickly discover regressions across our many portals and pages, as well as a remote browser screenshot service for generating animations for portal maps.}
-        \resumeItem{Major features and improvements for Axiom’s data portals, including a cross-portal feature called \textit{Map Views} enabling users to create, edit, share and publish multiple portal map instances.}
+        \resumeItem{Internal React packages to modularize and improve UI components, including time pickers and charts.}
+        \resumeItem{Data portal features, including a cross-portal feature called \textit{Map Views} enabling users to create, edit, share and publish multiple portal map instances.}
+        \resumeItem{A remote browser service for internal QA to help quickly discover regressions across portals and landing pages.}
       \resumeItemListEnd
     \resumeSubheading
       {Cozy}{Portland, Oregon}
@@ -165,15 +166,15 @@
         \resumeItemListStart
             \resumeItem{Led development of major components of Cozy's web app and payments system.}
             \resumeItem{Transitioned components and services to be presented and consumed by Apartments.com after Cozy's acquisition by CoStar Group.}
-            \resumeItem{Mentored junior engineers. Led product development efforts on large projects, including project and sprint planning and organizing team efforts.}
+            \resumeItem{Mentored junior engineers and led product development efforts on large projects, including project and sprint planning, organizing team efforts, and presenting project progress.}
         \resumeItemListEnd
     \resumeSubheading
       {Self}{Portland, Oregon}
       {Independent Study}{Dec 2017 \textbf{--} Oct 2018, Full-time}
 
       \resumeSectionBody{
-        I took an unpaid sabbatical to focus on learning about fields I am passionate about.
-        After returning to professional life, I continued to learn and read papers in my free time, and finally decided to pursue a Master's degree, aiming to transition into software domains that interest and inspire me.
+        I took an unpaid sabbatical to focus on learning more about fields I am passionate about.
+        Ultimately, I decided to pursue a Master's degree, aiming to transition into software domains that interest and inspire me.
       }
       \resumeItemListStart
         \resumeItem{Released an \href{https://karlhiner.com/beatbot}{Android app} for sample-based music production.}
@@ -182,34 +183,34 @@
         \resumeItem{Developed digital audio workstation software.}
         \resumeItem{Implemented a declarative static site generator in React, and used it to build my portfolio/blog website.}
       \resumeItemListEnd
+    \newpage
     \resumeSubheading
       {New Relic - Applied Intelligence Services Team}{Portland, Oregon}
       {Senior Software Engineer}{Oct 2016 \textbf{--} Dec 2017, Full-time}
         \resumeItemListStart
-          \resumeItem{Researched and developed products for the Applied Intelligence team, including dynamic baselines, error profiles and host outlier detection.}
-          \resumeItem{Leveraged machine learning and statistical techniques on data from many monitoring sources to provide customers with actionable information and context to find, understand and fix software problems quickly. Architected, built, shipped and maintained frontend components, backend services and APIs.}
-          \resumeItem{Architected, built, shipped and maintained frontend components, backend services and APIs.}
+          \resumeItem{Researched, architected, and built products including dynamic baselines, error profiles, and host outlier detection.}
+          \resumeItem{Leveraged machine learning and statistical techniques on data from multiple monitoring sources to provide customers with actionable information and context to find, understand and fix software problems quickly.}
         \resumeItemListEnd
     \resumeSubheading
       {New Relic - Mobile Product Team}{Portland, Oregon}
       {Software Engineer / Senior Software Engineer}{Apr 2014 \textbf{--} Oct 2016, Full-time}
         \resumeItemListStart
-          \resumeItem{Designed, built and maintained several APIs, UI features and high-throughput services, mostly using Java, Ruby and React.}
-          \resumeItem{Acted as the technical lead on significant features including activity tracing, version trends, as well as features for crash reporting, network reporting, and real user monitoring.}
+        \resumeItem{Acted as the technical lead on significant features including activity tracing, version trends, as well as features for crash reporting, network reporting, and real user monitoring.}
+        \resumeItem{Designed and shipped APIs, UI features, and high-throughput services using Java, Ruby, and React.}
         \resumeItemListEnd
     \resumeSubheading
       {New Relic - Mobile Team}{Portland, Oregon}
       {Junior Software Engineer}{May 2013 \textbf{--} Apr 2014, Full-time}
         \resumeItemListStart
-          \resumeItem{Co-produced the front-end for the Mobile product Rails application.}
+          \resumeItem{Co-produced the frontend for the Mobile product Rails application.}
           \resumeItem{Developed data collection and aggregation service features.}
-          \resumeItem{Implemented components of the Android agent responsible for sourcing and reporting data from Android applications.}
+          \resumeItem{Implemented components of the Android application monitoring agent.}
         \resumeItemListEnd
     \resumeSubheading
       {Thetus Corporation}{Portland, Oregon}
       {DevOps Intern}{Jan 2013 \textbf{--} May 2013, Half-time}
         \resumeItemListStart
-          \resumeItem{Automated host environment setup and web-app deployment.}
+          \resumeItem{Automated host environment setup and web application deployment.}
         \resumeItemListEnd 
     \resumeSubheading
       {Jive Software}{Portland, Oregon}
@@ -217,8 +218,7 @@
         \resumeItemListStart
           \resumeItem{Developed features and fixed bugs for the Jive platform.}
           \resumeItem{Designed and implemented an automated test framework for Jive’s web application on a small team.}
-          \resumeItem{Co-implemented a modular and extensible testing framework, and wrote many functional tests using this framework.}
-          \resumeItem{Worked with teams to generate test plans.}
+          \resumeItem{Co-implemented a modular testing framework, and wrote comprehensive functional tests using this framework.}
         \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -275,6 +275,12 @@
 
       \resumeSectionBody{
         A sample-based music production app for Android, with an OpenSL audio/effects backend implemented in C, and a custom OpenGL-based 2D UI designed to minimize draw call submissions for optimal performance on low-end devices.
+      }
+    \resumeProjectHeading
+      {\textbf{Auto-Sampler} $|$ MaxMSP/Ruby/Javascript/C $|$ \href{https://karlhiner.com/music_generation/auto_sampler}{GitHub}}{}
+
+      \resumeSectionBody{
+        A Max4Live instrument that streams looping audio segments matching the pitch of incoming MIDI notes in real-time.
       }
     \resumeSubHeadingListEnd
 
