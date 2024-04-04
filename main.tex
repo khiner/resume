@@ -13,14 +13,13 @@
 \usepackage{tabularx}
 \usepackage{hyphenat}
 \usepackage{fontawesome}
+\usepackage{changepage}
+
 \input{glyphtounicode}
 
-\definecolor{linkcolor}{RGB}{0, 114, 178}
+\definecolor{linkcolor}{RGB}{0, 70, 150}
 
-\hypersetup{
-  colorlinks = true,
-  urlcolor = linkcolor
-}
+\hypersetup{colorlinks = true}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -43,7 +42,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-6pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -77,18 +76,12 @@
       \small#1 & #2 \\
     \end{tabular*}\vspace{-9pt}
 }
-\newcommand{\resumeOrganizationHeading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textit{\small #2} \\
-      \textit{\small#3}
-    \end{tabular*}\vspace{-7pt}
-}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
@@ -98,16 +91,15 @@
   \vspace{-5pt}
 }
 
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \begin{document}
 
 %---------- HEADING ----------
 
+\hypersetup{urlcolor = black} % Don't color link text in the header.
+
 \begin{center}
-    \textbf{\Huge \scshape Karl Hiner} \\ \vspace{3pt}
+    \textbf{\Huge Karl Hiner} \\ \vspace{3pt}
     \small
     \faMobile \hspace{.5pt} \href{tel:6127479175}{612-747-9175}
     $|$
@@ -119,27 +111,34 @@
     $|$
     \faGlobe \hspace{.5pt} \href{https://karlhiner.com}{Portfolio}
 \end{center}
+\vspace{-18pt}
 
+\hypersetup{urlcolor = linkcolor} % Change back to link color for the rest of the document.
 
 \section{Education}
-  \vspace{3pt}
+  \vspace{1pt}
   \resumeSubHeadingListStart
     \resumeEducationHeading
       {Portland State University}{Portland, Oregon}
       {Bachelors of Science, Computer Science $|$ \footnotesize{GPA: 3.82}}{2010 \textbf{--} 2013}{}{}
     \resumeEducationHeading
       {Georgia Institute of Technology}{Atlanta, Georgia}
-      {Master's, Computational Sciences and Engineering $|$ \footnotesize{GPA: 3.9}}{Sep. 2022 \textbf{--} graduating Apr. 2024}{}{}
+      {Master's, Computational Sciences and Engineering $|$ \footnotesize{Expected GPA: 3.9}}{Sep. 2022 \textbf{--} graduating Apr. 2024}{}{}
   \resumeSubHeadingListEnd
 
-\section{Skills}
-  \vspace{2pt}
+\section{Relevant Coursework}
   \resumeSubHeadingListStart
-    \small{\item{
+    \resumeItem{Modeling and Simulation, Computational Physics, Computational Data Analysis, Computer Graphics, Computer Animation, Numerical Linear Algebra, High Performance Computing, Machine Learning with Graphs}
+    \resumeSubHeadingListEnd
+    \vspace{-15pt}
+
+\section{Skills}
+  \resumeSubHeadingListStart
+    \resumeItem{
         \textbf{Languages:}{ C++, Python, TypeScript/JavaScript, Java, Ruby, Julia, SQL} \\ \vspace{3pt}
         \textbf{Technologies:}{ Git, ImGui, React, Postgres, Docker, JAX, PyTorch, Node} \\ \vspace{3pt}
         \textbf{Expertise:}{ Full-stack development, technical leadership, physical modeling and simulation, applied machine learning} \\ \vspace{3pt}
-    }}
+    }
   \resumeSubHeadingListEnd
 
 \section{Experience}
@@ -174,7 +173,7 @@
 
       \resumeSectionBody{
         I took an unpaid sabbatical to focus on learning about fields I am passionate about.
-        After returning to professional life, I continued to learn and read papers in my free time, and finally decided to pursue a Master's degree, aiming to transition into software domains that deeply interest and inspire me.
+        After returning to professional life, I continued to learn and read papers in my free time, and finally decided to pursue a Master's degree, aiming to transition into software domains that interest and inspire me.
       }
       \resumeItemListStart
         \resumeItem{Released an \href{https://karlhiner.com/beatbot}{Android app} for sample-based music production.}
@@ -244,8 +243,8 @@
         Python Jupyter notebooks covering each chapter of several books, including:
       }
       \resumeItemListStart
-        \resumeItem{Gareth Loy’s Musimathics \emph{\href{https://karlhiner.com/jupyter_notebooks/musimathics_volume_1}{Vol 1.}} \emph{\href{https://karlhiner.com/jupyter_notebooks/musimathics_volume_2}{Vol 2.}}}
-        \resumeItem{Julius O. Smith’s \emph{\href{https://karlhiner.com/jupyter_notebooks/mathematics_of_the_dft}{Mathematics of the DFT}}, \emph{\href{https://karlhiner.com/jupyter_notebooks/intro_to_digital_filters}{Intro to Digital Filters}}, and \emph{\href{https://karlhiner.com/jupyter_notebooks/physical_audio_signal_processing}{Physical Audio Signal Processing}}}
+        \resumeItem{Gareth Loy’s Musimathics \href{https://karlhiner.com/jupyter_notebooks/musimathics_volume_1}{Vol 1.} \href{https://karlhiner.com/jupyter_notebooks/musimathics_volume_2}{Vol 2.}}
+        \resumeItem{Julius O. Smith’s \href{https://karlhiner.com/jupyter_notebooks/mathematics_of_the_dft}{Mathematics of the DFT}, \href{https://karlhiner.com/jupyter_notebooks/intro_to_digital_filters}{Intro to Digital Filters}, and \href{https://karlhiner.com/jupyter_notebooks/physical_audio_signal_processing}{Physical Audio Signal Processing}}
       \resumeItemListEnd
     \resumeProjectHeading
       {\textbf{Generating Music with WaveNet and SampleRNN} $|$ Python $|$ \href{https://karlhiner.com/music_generation/wavenet_and_samplernn}{GitHub}}{}
@@ -260,29 +259,24 @@
         Parameterize audio graphs in real-time to model an incoming/outgoing audio stream pair with differentiable DSP components, with data and audio over WebRTC.
       }
     \resumeProjectHeading
-      {\textbf{FlowGrid} $|$ C++/ImGui $|$\href{https://github.com/khiner/flowgrid}{GitHub}}{}
+      {\textbf{DrumClassification} $|$ Python/PyTorch $|$ \href{https://github.com/khiner/DrumClassification}{GitHub}}{}
+
+      \resumeSectionBody{
+        A drum instrument classification model and preprocessing pipeline.
+      }
+    \resumeProjectHeading
+      {\textbf{FlowGrid} $|$ C++/ImGui $|$ \href{https://github.com/khiner/flowgrid}{GitHub}}{}
 
       \resumeSectionBody{
         Immediate-mode interface for the Faust functional audio language, backed by a persistent store supporting navigation to any point in the project history in constant time.
       }
     \resumeProjectHeading
-      {\textbf{BeatBot} $|$ Java/C/OpenGL $|$  \href{https://github.com/khiner/beatbot}{GitHub}}{}
+      {\textbf{BeatBot} $|$ Java/C/OpenGL $|$ \href{https://github.com/khiner/beatbot}{GitHub}}{}
 
       \resumeSectionBody{
         A sample-based music production app for Android, with an OpenSL audio/effects backend implemented in C, and a custom OpenGL-based 2D UI designed to minimize draw call submissions for optimal performance on low-end devices.
       }
-    \resumeProjectHeading
-      {\textbf{Auto-Sampler} $|$ MaxMSP/Ruby/Javascript/C $|$ \href{https://karlhiner.com/music_generation/auto_sampler}{GitHub}}{}
-
-      \resumeSectionBody{
-        A Max4Live instrument that streams looping audio segments matching the pitch of incoming MIDI notes in real-time.
-      }
     \resumeSubHeadingListEnd
-
-% \section{Relevant Coursework}
-  % \resumeSectionBody{
-    % Modeling and Simulation, Computational Physics, Computational Data Analysis, Computer Graphics, Computer Animation, Numerical Linear Algebra, High Performance Computing, Machine Learning with Graphs
-  % }
 
 % \section{Hobbies}
   % \resumeSectionBody{
