@@ -125,15 +125,6 @@
       {Bachelor of Science, Computer Science $|$ \footnotesize{GPA: 3.82}}{2010 \textbf{--} 2013}{}{}
   \resumeSubHeadingListEnd
 
-\section{Skills}
-  \resumeSubHeadingListStart
-    \resumeItem{
-        \textbf{Languages:}{ C++, Python, TypeScript/JavaScript, Java, Ruby, Julia, SQL} \\ \vspace{3pt}
-        \textbf{Technologies:}{ Git, React, ImGui, Linux, Postgres, PyTorch, JAX, Vulkan/OpenGL, GLM, Node, Docker} \\ \vspace{3pt}
-        \textbf{Expertise:}{ Full-stack development, technical leadership, physical modeling and simulation, applied machine learning} \\ \vspace{3pt}
-    }
-  \resumeSubHeadingListEnd
-
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
@@ -142,22 +133,24 @@
 
       \resumeSectionBody{
         Lead developer on the next generation of the Research Workspace, a web application for collaboratively managing data for scientific projects.
-        Designed and implemented the following major projects:
       }
       \resumeItemListStart
-        \resumeItem{An extensive admin application supporting many internal Research Workspace use cases.}
-        \resumeItem{A user authentication and authorization service backend and UI library used across multiple Axiom services.}
-        \resumeItem{Internal React packages to modularize and improve UI components, including time pickers and charts.}
-        \resumeItem{Data portal features, including a cross-portal feature called \textit{Map Views}, enabling users to create, edit, share, and publish multiple portal map instances.}
-        \resumeItem{A remote browser service for internal QA to help quickly discover regressions across portals and landing pages.}
+        \resumeItem{Developed an extensive admin application and near-complete rewrite of the Research Workspace, dramatically simplifying application architecture while expanding capabilities, using TypeScript, GraphQL, and Postgres.}
+        \resumeItem{Implemented a cross-application user authentication and authorization service and UI library to replace three existing services, integrating with Google auth and supporting flexible roles and feature access controls. Amazon Cognito, Express.js, and Postgres for the backend, and TypeScript/React for the client package and UI.}
+        \resumeItem{Developed extensible internal React packages to modularize and modernize UI components, including charts and time pickers, including Storybook UI component tests and documentation, and replaced legacy data portal components and systems in a piecemeal migration from Backbone to React.}
+        \resumeItem{Implemented full-stack data portal features, including a cross-portal feature called \textit{Map Views}, enabling users to create, edit, share, and publish multiple portal map instances.}
+        \resumeItem{Implemented a remote browser service and UI for internal QA to help quickly discover regressions across portals and landing pages.}
       \resumeItemListEnd
     \resumeSubheading
       {Cozy}{Portland, Oregon}
       {Senior Software Engineer}{Oct 2018 \textbf{--} Jan 2020}
         \resumeItemListStart
-            \resumeItem{Led the development of major components of Cozy's web app and payments system.}
-            \resumeItem{Transitioned components and services to be presented and consumed by Apartments.com after Cozy's acquisition by CoStar Group.}
-            \resumeItem{Mentored junior engineers and led product development efforts on large projects, including project and sprint planning, organizing team efforts, and presenting project progress.}
+          \resumeItem{Led the transition of major components and services to be presented and consumed by Apartments.com after Cozy's acquisition by CoStar Group.}
+          \resumeItem{Implemented a Stripe-backed payment method creation flow, including detailed error handling and user-facing notifications, improving the user experience and reducing support volume.}
+          \resumeItem{Integrated Stripe Radar risk evaluations into fraud detection pipeline, improving fraud detection accuracy.}
+          \resumeItem{Automated a manual process for determining landlord tax requirements by aggregating data from multiple sources, reducing the time to determine tax requirements from hours to seconds.}
+          \resumeItem{Implemented a model to predict and flag accounts that are likely to fail their next payment, preventing ACH payment failures and reducing support volume.}
+          \resumeItem{Mentored junior engineers and led development efforts on major projects, led sprint planning, planned and organized team efforts, and presented team progress.}
         \resumeItemListEnd
     \resumeSubheading
       {Self}{Portland, Oregon}
@@ -168,47 +161,39 @@
         Ultimately, I decided to pursue a Master's degree, aiming to transition into software domains that interest and inspire me.
       }
       \resumeItemListStart
-        \resumeItem{Released an \href{https://karlhiner.com/beatbot}{Android app} for sample-based music production.}
+        \resumeItem{Released \href{https://karlhiner.com/beatbot}{BeatBot}, a sample-based music production app for Android with a C-based audio/effects backend, and a custom OpenGL 2D UI designed to minimize draw call submissions for optimal performance on low-end devices.}
         \resumeItem{Studied digital audio signal processing, machine learning, C++, and Python, and produced in-depth Jupyter notebooks for each chapter of eight technical books on these topics.}
-        \resumeItem{Completed online courses in deep learning and statistics.}
-        \resumeItem{Developed digital audio workstation software.}
-        \resumeItem{Implemented a declarative static site generator in React and used it to build my portfolio/blog website.}
+        \resumeItem{Using C++ and the JUCE framework, developed a node-based \href{https://github.com/khiner/flowgrid_old}{digital audio workstation} that automatically determines default connections based on a grid layout, supporting VST plugins and audio/MIDI input/output, integrating with the Push 2 MIDI controller and LCD display.}
+        \resumeItem{Completed deep learning and statistics online courses.}
+        \resumeItem{Implemented a declarative static site generator in React and used it to build my portfolio website.}
       \resumeItemListEnd
     \newpage
     \resumeSubheading
       {New Relic}{Portland, Oregon}
       {Senior Software Engineer - Applied Intelligence Services Team}{Oct 2016 \textbf{--} Dec 2017}
         \resumeItemListStart
-          \resumeItem{Researched, architected, and built products, including dynamic baselines, error profiles, and host outlier detection.}
+          \resumeItem{Researched, architected, built, and shipped products, including dynamic baselines, error profiles, and host outlier detection, using Java, React, and Ruby.}
           \resumeItem{Leveraged machine learning and statistical techniques on data from multiple monitoring sources to provide customers with actionable information and context to find, understand, and fix software problems quickly.}
+          \resumeItem{Prototyped novel timeseries algorithms and data visualizations using Python, Jupyter, D3.js, and Three.js, including a T-SNE-based clustering visualization for host clustering and outlier detection that was demoed by our product manager in a FutureStack presentation.}
         \resumeItemListEnd
         \vspace{-15pt}
     \resumeSubheading
       {}{}
       {Software Engineer / Senior Software Engineer - Mobile Product Team}{Apr 2014 \textbf{--} Oct 2016}
         \resumeItemListStart
-        \resumeItem{Acted as the technical lead on significant features, including activity tracing and version trends, as well as features for crash reporting, network reporting, and real user monitoring.}
-        \resumeItem{Designed and shipped APIs, UI features, and high-throughput services using Java, Ruby, and React.}
+        \resumeItem{Acted as the technical lead on significant features, including activity tracing and version trends.}
+        \resumeItem{Migrated the crash reporting database and API from Postgres to Cassandra, dramatically reducing write and query times while increasing data retention.}
+        \resumeItem{Implemented major features for crash reporting, network reporting, and real user monitoring, using Java, React, and Ruby on Rails.}
         \resumeItemListEnd
         \vspace{-15pt}
     \resumeSubheading
       {}{}
       {Junior Software Engineer - Mobile Team}{May 2013 \textbf{--} Apr 2014}
         \resumeItemListStart
-          \resumeItem{Co-produced the frontend for the Mobile product Rails application.}
-          \resumeItem{Developed data collection and aggregation service features.}
-          \resumeItem{Implemented components of the Android application monitoring agent.}
+          \resumeItem{Co-produced the frontend for the Mobile product Ruby on Rails application.}
+          \resumeItem{Developed features for the data collection and aggregation service backend and the Android application monitoring agent, receiving billions of data harvest posts per day.}
         \resumeItemListEnd
   \resumeSubHeadingListEnd
-
-\section{Relevant Coursework}
-  \resumeSubHeadingListStart
-    \resumeItem{
-      \textbf{GA Tech:}{ Modeling and Simulation, Computational Physics, Computational Data Analysis, Computer Graphics, Computer Animation, Numerical Linear Algebra, High Performance Computing, Machine Learning with Graphs} \\ \vspace{3pt}
-      \textbf{PSU:}{ Machine Learning, AI and Game Design, Parallel Programming} \\ \vspace{3pt}
-      \textbf{Coursera:}{ Machine Learning, Deep Learning, Probabilistic Graphical Models, Audio Signal Processing} \\ \vspace{3pt}
-    }
-    \resumeSubHeadingListEnd
 
 \section{Projects}
     \resumeSubHeadingListStart
@@ -278,9 +263,18 @@
       }
     \resumeSubHeadingListEnd
 
+\section{Relevant Coursework}
+  \resumeSubHeadingListStart
+    \resumeItem{
+      \textbf{GA Tech:}{ Modeling and Simulation, Computational Physics, Computational Data Analysis, Computer Graphics, Computer Animation, Numerical Linear Algebra, High Performance Computing, Machine Learning with Graphs} \\ \vspace{3pt}
+      \textbf{PSU:}{ Machine Learning, AI and Game Design, Parallel Programming} \\ \vspace{3pt}
+      \textbf{Coursera:}{ Machine Learning, Deep Learning, Probabilistic Graphical Models, Audio Signal Processing} \\ \vspace{3pt}
+    }
+    \resumeSubHeadingListEnd
+
 % \section{Hobbies}
   % \resumeSectionBody{
-    % Watching movies, synthesizers and other music toys, video games, rock climbing, hiking
+    % Movies, synthesizers and other music toys, video games, rock climbing, hiking
   % }
 
 %-------------------------------------------
