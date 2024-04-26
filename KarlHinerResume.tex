@@ -59,7 +59,7 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \normalsize \textbf{#1} & \small#2 \\
       \small #3 & \small #4 \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-9pt}
 }
 \newcommand{\resumeEducationHeading}[6]{
   \vspace{-2pt}\item
@@ -139,13 +139,14 @@
         \resumeItem{Implemented a user authentication and authorization service and UI library to replace several existing services across applications, integrating with Google auth and supporting flexible roles and feature access controls. Amazon Cognito, Express.js, and Postgres for the backend, and TypeScript/React for the client package and UI.}
         \resumeItem{Developed extensible internal React packages to modularize and modernize UI components, including charts and time pickers, including Storybook UI component tests and documentation, and replaced legacy data portal components and systems in a piecemeal migration from Backbone to React.}
         \resumeItem{Implemented full-stack data portal features, including a cross-portal feature called \textit{Map Views}, enabling users to create, edit, share, and publish multiple portal map instances.}
-        \resumeItem{Implemented a remote browser service and UI for internal QA to help quickly discover regressions across portals and landing pages.}
+        \resumeItem{Built a remote browser service and UI for internal QA to quickly discover regressions across data portals.}
       \resumeItemListEnd
     \resumeSubheading
       {Cozy}{Portland, Oregon}
       {Senior Software Engineer}{Oct 2018 \textbf{--} Jan 2020}
+
         \resumeItemListStart
-          \resumeItem{Led the transition of major components and services to be presented and consumed by Apartments.com after Cozy's acquisition by CoStar Group.}
+          \resumeItem{Led the transition of major components and services to be presented and consumed by Apartments.com after Cozy's acquisition by CoStar Group using Ruby and Javascript.}
           \resumeItem{Implemented a Stripe-backed payment method creation flow, including detailed error handling and user-facing notifications, improving the user experience and reducing support volume.}
           \resumeItem{Integrated Stripe Radar risk evaluations into fraud detection pipeline, improving fraud detection accuracy.}
           \resumeItem{Automated a manual process for determining landlord tax requirements by aggregating data from multiple sources, reducing the time to determine tax requirements from hours to seconds.}
@@ -171,6 +172,7 @@
     \resumeSubheading
       {New Relic}{Portland, Oregon}
       {Senior Software Engineer - Applied Intelligence Services Team}{Oct 2016 \textbf{--} Dec 2017}
+
         \resumeItemListStart
           \resumeItem{Researched, architected, built, and shipped products using Java, React, and Ruby, including dynamic baselines, error profiles, and host outlier detection.}
           \resumeItem{Leveraged machine learning and statistical techniques on data from multiple monitoring sources to provide customers with actionable information and context to find, understand, and fix software problems quickly.}
@@ -183,18 +185,19 @@
         \resumeItemListStart
         \resumeItem{Acted as the technical lead on significant features, including activity tracing and version trends.}
         \resumeItem{Migrated the crash reporting database and API from Postgres to Cassandra, dramatically reducing write and query times while increasing data retention.}
-        \resumeItem{Implemented major features for crash reporting, network reporting, and real user monitoring using Java, React, and Ruby on Rails.}
+        \resumeItem{Implemented major features for crash reporting, network reporting, and real user monitoring using Java, React, and Ruby.}
         \resumeItemListEnd
         \vspace{-15pt}
     \resumeSubheading
       {}{}
       {Junior Software Engineer - Mobile Team}{May 2013 \textbf{--} Apr 2014}
+
         \resumeItemListStart
           \resumeItem{Co-produced the frontend for the Mobile product Ruby on Rails application.}
           \resumeItem{Developed features for the data collection and aggregation service backend and the Android application monitoring agent, receiving billions of data harvest posts per day.}
         \resumeItemListEnd
   \resumeSubHeadingListEnd
-
+\vspace{-10pt}
 \section{Projects}
     \resumeSubHeadingListStart
     \resumeProjectHeading
@@ -225,18 +228,18 @@
       {\href{https://github.com/khiner/flowgrid}{\textbf{FlowGrid}} $|$ C++/ImGui}{Mar 2022 \textbf{--} Present}
 
       \resumeSectionBody{
-        Immediate-mode interface for the Faust functional audio language, backed by a persistent store supporting navigation to any point in the project history in constant time.
-      }
+        Immediate-mode editor for Faust (functional audio language) programs, backed by a persistent store supporting constant-time navigation to any point in project history.
+        Includes a from-scratch syntax aware embedded text editor with a language-complete \href{https://github.com/khiner/tree-sitter-faust}{Faust tree-sitter grammar}, editing LLVM JIT-compiled Faust,
+        a highly configurable/monitorable audio graph editor and matrix mixer,
+        complete implementation of Faust DSP UI spec, and extensive audio device config.}
     \resumeProjectHeading
       {\href{https://github.com/khiner/notebooks}{\textbf{Jupyter notebooks}} $|$ Python}{Jan 2018 \textbf{--} Jan 2020}
 
       \resumeSectionBody{
-        Python Jupyter notebooks covering each chapter of several books, including:
+        Python Jupyter notebooks covering each chapter of several books, including Gareth Loy’s
+        Musimathics \href{https://karlhiner.com/jupyter_notebooks/musimathics_volume_1}{Vol 1.}/\href{https://karlhiner.com/jupyter_notebooks/musimathics_volume_2}{Vol 2.}
+        and Julius O. Smith’s \href{https://karlhiner.com/jupyter_notebooks/mathematics_of_the_dft}{Mathematics of the DFT}, \href{https://karlhiner.com/jupyter_notebooks/intro_to_digital_filters}{Intro to Digital Filters}, and \href{https://karlhiner.com/jupyter_notebooks/physical_audio_signal_processing}{Physical Audio Signal Processing}.
       }
-      \resumeItemListStart
-        \resumeItem{Gareth Loy’s Musimathics \href{https://karlhiner.com/jupyter_notebooks/musimathics_volume_1}{Vol 1.} \href{https://karlhiner.com/jupyter_notebooks/musimathics_volume_2}{Vol 2.}}
-        \resumeItem{Julius O. Smith’s \href{https://karlhiner.com/jupyter_notebooks/mathematics_of_the_dft}{Mathematics of the DFT}, \href{https://karlhiner.com/jupyter_notebooks/intro_to_digital_filters}{Intro to Digital Filters}, and \href{https://karlhiner.com/jupyter_notebooks/physical_audio_signal_processing}{Physical Audio Signal Processing}}
-      \resumeItemListEnd
     \resumeProjectHeading
       {\href{https://github.com/khiner/jaxdsp}{\textbf{JAXdsp}} $|$ Python/JAX/TypeScript/React}{Dec 2020 \textbf{--} Feb 2022}
 
